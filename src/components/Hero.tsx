@@ -1,4 +1,5 @@
 import heroImage from "@/assets/gallery/work-4.jpg";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -33,18 +34,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-            <a
-              href="#contacto"
-              className="px-8 py-4 bg-primary text-primary-foreground font-medium tracking-wider uppercase text-sm hover:bg-copper-light transition-colors duration-300"
-            >
-              Solicitar Orçamento
-            </a>
-            <a
-              href="#galeria"
-              className="px-8 py-4 border border-border text-foreground font-medium tracking-wider uppercase text-sm hover:border-primary hover:text-primary transition-colors duration-300"
-            >
-              Ver Portfolio
-            </a>
+            <Button asChild size="lg" cut="right" className="px-8 py-4 tracking-wider uppercase text-sm">
+              <a href="#contacto">Solicitar Orçamento</a>
+            </Button>
+            <Button asChild variant="outline" size="lg" cut="left" className="px-8 py-4 tracking-wider uppercase text-sm">
+              <a href="#galeria">Ver Portfolio</a>
+            </Button>
           </div>
         </div>
       </div>
