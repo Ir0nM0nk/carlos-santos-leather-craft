@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Cormorant Garamond", "serif"],
+        body: ["Montserrat", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        copper: {
+          DEFAULT: "hsl(25, 60%, 45%)",
+          light: "hsl(25, 60%, 55%)",
+          dark: "hsl(25, 60%, 35%)",
+        },
+        leather: {
+          DEFAULT: "hsl(25, 40%, 25%)",
+          light: "hsl(25, 35%, 35%)",
+        },
+        steel: {
+          DEFAULT: "hsl(220, 5%, 35%)",
+          dark: "hsl(220, 5%, 20%)",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,20 +82,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
