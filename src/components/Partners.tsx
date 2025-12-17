@@ -1,15 +1,18 @@
 const Partners = () => {
   const partners = [
-    "BIRKENSTOCK",
-    "LOUIS VUITTON",
-    "GUCCI",
-    "PRADA",
-    "HERMÈS",
-    "CHANEL",
+    { name: "BIRKENSTOCK", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Birkenstock-Logo.svg/320px-Birkenstock-Logo.svg.png" },
+    { name: "LOUIS VUITTON", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/320px-Louis_Vuitton_logo_and_wordmark.svg.png" },
+    { name: "GUCCI", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gucci_logo.svg/320px-Gucci_logo.svg.png" },
+    { name: "PRADA", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Prada-Logo.svg/320px-Prada-Logo.svg.png" },
+    { name: "HERMÈS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Herm%C3%A8s_Paris.svg/320px-Herm%C3%A8s_Paris.svg.png" },
+    { name: "CHANEL", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Chanel_logo_interlocking_cs.svg/320px-Chanel_logo_interlocking_cs.svg.png" },
   ];
 
+  // Duplicate partners for seamless loop
+  const duplicatedPartners = [...partners, ...partners];
+
   return (
-    <section id="parceiros" className="section-padding bg-secondary/30">
+    <section id="parceiros" className="section-padding bg-secondary/30 overflow-hidden">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
@@ -19,20 +22,26 @@ const Partners = () => {
             Marcas que <span className="text-gradient-copper">Confiam</span> em Nós
           </h2>
         </div>
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partners.map((partner, index) => (
+      <div className="relative">
+        <div className="flex animate-marquee">
+          {duplicatedPartners.map((partner, index) => (
             <div
               key={index}
-              className="flex items-center justify-center h-24 px-6 border border-border/50 bg-card/50 hover:border-primary/50 transition-colors duration-300 group"
+              className="flex-shrink-0 flex items-center justify-center h-24 w-48 mx-8 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
-              <span className="font-display text-lg md:text-xl tracking-widest text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                {partner}
-              </span>
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-16 max-w-full object-contain"
+              />
             </div>
           ))}
         </div>
+      </div>
 
+      <div className="container-narrow">
         <p className="text-center text-muted-foreground mt-12 text-sm">
           E muitas outras marcas de prestígio que confiam na nossa qualidade e profissionalismo.
         </p>
