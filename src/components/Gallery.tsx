@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 import work1 from "@/assets/gallery/work-1.jpg";
 import work2 from "@/assets/gallery/work-2.jpg";
@@ -25,19 +26,20 @@ const Gallery = () => {
     { src: work7, alt: "Operador na máquina de furar" },
   ];
 
+  const { t } = useTranslation();
+
   return (
     <section id="galeria" className="section-padding metal-texture">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
-            O Nosso Trabalho
+            {t("gallery.kicker")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-            Galeria de <span className="text-gradient-copper">Produção</span>
+            {t("gallery.h1")} <span className="text-gradient-copper"></span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Cada cortante é uma obra de precisão. Explore o nosso processo de fabrico 
-            e a dedicação que colocamos em cada peça.
+            {t("gallery.subtitle")}
           </p>
         </div>
 
@@ -75,7 +77,7 @@ const Gallery = () => {
           <button
             className="absolute top-6 right-6 text-foreground hover:text-primary transition-colors"
             onClick={() => setSelectedImage(null)}
-            aria-label="Fechar"
+            aria-label={t("gallery.lightbox.close")}
           >
             <X size={32} />
           </button>

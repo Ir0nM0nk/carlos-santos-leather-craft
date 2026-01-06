@@ -1,4 +1,7 @@
+import { useTranslation } from "@/i18n";
+
 const Partners = () => {
+  const { t } = useTranslation();
   const partners = [
     { name: "BIRKENSTOCK", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Birkenstock-Logo.svg/320px-Birkenstock-Logo.svg.png" },
     { name: "LOUIS VUITTON", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/320px-Louis_Vuitton_logo_and_wordmark.svg.png" },
@@ -16,10 +19,10 @@ const Partners = () => {
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
-            Parceiros de Excelência
+            {t("partners.kicker")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold">
-            Marcas que <span className="text-gradient-copper">Confiam</span> em Nós
+            {t("partners.h1")} <span className="text-gradient-copper"></span>
           </h2>
         </div>
       </div>
@@ -43,7 +46,7 @@ const Partners = () => {
 
       <div className="container-narrow">
         <p className="text-center text-muted-foreground mt-12 text-sm">
-          E muitas outras marcas de prestígio que confiam na nossa qualidade e profissionalismo.
+          {t("partners.sub")}
         </p>
       </div>
     </section>

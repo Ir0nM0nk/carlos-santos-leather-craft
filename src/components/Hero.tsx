@@ -1,7 +1,9 @@
 import heroImage from "@/assets/gallery/work-4.jpg";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/i18n";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -19,26 +21,25 @@ const Hero = () => {
       <div className="relative z-10 container-narrow text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Desde 1994
+            {t("hero.since")}
           </p>
           
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight mb-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            Precisão em
+            {t("hero.title.line1")}
             <br />
-            <span className="text-gradient-copper">Cada Corte</span>
+            <span className="text-gradient-copper">{t("hero.title.line2")}</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-            Mestres artesãos na produção de cortantes para as mais prestigiadas 
-            marcas mundiais de calçado. Tradição, inovação e excelência há mais de 30 anos.
+            {t("hero.subtitle")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
             <Button asChild size="lg" cut="right" className="px-8 py-4 tracking-wider uppercase text-sm">
-              <a href="#contacto">Solicitar Orçamento</a>
+              <a href="#contacto">{t("hero.cta.quote")}</a>
             </Button>
             <Button asChild variant="outline" size="lg" cut="left" className="px-8 py-4 tracking-wider uppercase text-sm">
-              <a href="#galeria">Ver Portfolio</a>
+              <a href="#galeria">{t("hero.cta.portfolio")}</a>
             </Button>
           </div>
         </div>

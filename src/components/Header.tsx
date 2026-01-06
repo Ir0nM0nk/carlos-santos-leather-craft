@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "@/i18n";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -13,11 +14,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const { t } = useTranslation();
+
   const navLinks = [
-    { href: "#sobre", label: "Sobre Nós" },
-    { href: "#parceiros", label: "Parceiros" },
-    { href: "#galeria", label: "Galeria" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "#sobre", label: t("nav.sobre") },
+    { href: "#parceiros", label: t("nav.parceiros") },
+    { href: "#galeria", label: t("nav.galeria") },
+    { href: "#contacto", label: t("nav.contacto") },
   ];
 
   return (

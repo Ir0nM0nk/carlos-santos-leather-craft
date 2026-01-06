@@ -1,11 +1,14 @@
 import aboutImage from "@/assets/gallery/work-7.jpg";
+import { useTranslation } from "@/i18n";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const stats = [
-    { value: "30+", label: "Anos de Experiência" },
-    { value: "500+", label: "Clientes Satisfeitos" },
-    { value: "50k+", label: "Cortantes Produzidos" },
-    { value: "100%", label: "Compromisso" },
+    { value: "30+", label: t("about.stats.0.label") },
+    { value: "500+", label: t("about.stats.1.label") },
+    { value: "50k+", label: t("about.stats.2.label") },
+    { value: "100%", label: t("about.stats.3.label") },
   ];
 
   return (
@@ -17,7 +20,7 @@ const About = () => {
             <div className="aspect-[4/5] overflow-hidden">
               <img
                 src={aboutImage}
-                alt="Artesão a trabalhar num cortante"
+                alt={t("about.kicker")}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -28,31 +31,24 @@ const About = () => {
           {/* Content */}
           <div>
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
-              Sobre Nós
+              {t("about.kicker")}
             </p>
             
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-8 leading-tight">
-              Tradição e Inovação
+              {t("about.h1.line1")}
               <br />
-              <span className="text-gradient-copper">em Harmonia</span>
+              <span className="text-gradient-copper">{t("about.h1.line2")}</span>
             </h2>
             
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                A <strong className="text-foreground">Santos & Carlos</strong> nasceu da paixão pelo trabalho artesanal 
-                e da visão de criar os melhores cortantes para a indústria do calçado. 
-                Há mais de três décadas, combinamos técnicas tradicionais com tecnologia 
-                de ponta para oferecer produtos de excelência.
+                {t("about.p.1")} 
               </p>
               <p>
-                A nossa equipa de mestres artesãos trabalha diariamente com materiais de 
-                primeira qualidade, garantindo a precisão milimétrica que as grandes 
-                marcas mundiais exigem. Do metal bruto ao cortante perfeito, cada peça 
-                que sai da nossa oficina carrega o selo da qualidade portuguesa.
+                {t("about.p.2")} 
               </p>
               <p>
-                Somos parceiros de confiança das mais prestigiadas marcas de luxo, 
-                contribuindo para a criação de calçado que define tendências em todo o mundo.
+                {t("about.p.3")}
               </p>
             </div>
 

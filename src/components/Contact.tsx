@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,8 +22,8 @@ const Contact = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Mensagem Enviada",
-      description: "Entraremos em contacto consigo brevemente.",
+      title: t("contact.toast.title"),
+      description: t("contact.toast.description"),
     });
 
     setFormData({ name: "", email: "", phone: "", message: "" });
@@ -62,14 +64,13 @@ const Contact = () => {
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
-            Entre em Contacto
+            {t("contact.kicker")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-            Vamos <span className="text-gradient-copper">Trabalhar</span> Juntos
+            {t("contact.h1.line1")} <span className="text-gradient-copper">{t("contact.h1.line2")}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Interessado nos nossos serviços? Entre em contacto connosco para 
-            discutir o seu projeto ou solicitar um orçamento.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -77,7 +78,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-card border border-border p-8 md:p-10">
             <h3 className="font-display text-2xl font-semibold mb-8">
-              Envie-nos uma Mensagem
+              {t("contact.form.title")}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -86,7 +87,7 @@ const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-medium mb-2 text-muted-foreground"
                   >
-                    Nome Completo
+                    {t("contact.label.name")}
                   </label>
                   <input
                     type="text"
@@ -96,7 +97,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-background border border-border focus:border-primary focus:outline-none transition-colors"
-                    placeholder="O seu nome"
+                    placeholder={t("contact.placeholder.name")}
                   />
                 </div>
                 <div>
@@ -104,7 +105,7 @@ const Contact = () => {
                     htmlFor="phone"
                     className="block text-sm font-medium mb-2 text-muted-foreground"
                   >
-                    Telefone
+                    {t("contact.label.phone")}
                   </label>
                   <input
                     type="tel"
@@ -113,7 +114,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-background border border-border focus:border-primary focus:outline-none transition-colors"
-                    placeholder="+351 000 000 000"
+                    placeholder={t("contact.placeholder.phone")}
                   />
                 </div>
               </div>
@@ -122,7 +123,7 @@ const Contact = () => {
                   htmlFor="email"
                   className="block text-sm font-medium mb-2 text-muted-foreground"
                 >
-                  Email
+                  {t("contact.label.email")}
                 </label>
                 <input
                   type="email"
@@ -132,7 +133,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border focus:border-primary focus:outline-none transition-colors"
-                  placeholder="email@exemplo.pt"
+                  placeholder={t("contact.placeholder.email")}
                 />
               </div>
               <div>
@@ -140,7 +141,7 @@ const Contact = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2 text-muted-foreground"
                 >
-                  Mensagem
+                  {t("contact.label.message")}
                 </label>
                 <textarea
                   id="message"
@@ -150,7 +151,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-background border border-border focus:border-primary focus:outline-none transition-colors resize-none"
-                  placeholder="Descreva o seu projeto ou pedido..."
+                  placeholder={t("contact.placeholder.message")}
                 />
               </div>
               <button
@@ -158,7 +159,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="w-full py-4 bg-primary text-primary-foreground font-medium tracking-wider uppercase text-sm hover:bg-copper-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "A Enviar..." : "Enviar Mensagem"}
+                {isSubmitting ? t("contact.button.sending") : t("contact.button.send")}
               </button>
             </form>
           </div>
