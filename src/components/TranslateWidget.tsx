@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation, type Lang } from "@/i18n";
 
 const TranslateWidget: React.FC = () => {
   const { lang, setLang } = useTranslation();
@@ -10,12 +10,15 @@ const TranslateWidget: React.FC = () => {
         <div style={{ fontSize: 12, marginBottom: 6, fontWeight: 600 }}>Idioma</div>
         <select
           value={lang}
-          onChange={(e) => setLang(e.target.value as "pt" | "en")}
+          onChange={(e) => setLang(e.target.value as Lang)}
           aria-label="Selecionar idioma"
           style={selectStyle}
         >
           <option value="pt">Português</option>
           <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
         </select>
         <div style={{ marginTop: 8, fontSize: 12 }}>
           <button
@@ -26,9 +29,27 @@ const TranslateWidget: React.FC = () => {
           </button>
           <button
             onClick={() => setLang("en")}
-            style={{ ...btnStyle, marginLeft: 8, background: "#0f172a" }}
+            style={{ ...btnStyle, marginLeft: 8 }}
           >
             EN
+          </button>
+          <button
+            onClick={() => setLang("fr")}
+            style={{ ...btnStyle, marginLeft: 8 }}
+          >
+            FR
+          </button>
+          <button
+            onClick={() => setLang("de")}
+            style={{ ...btnStyle, marginLeft: 8 }}
+          >
+            DE
+          </button>
+          <button
+            onClick={() => setLang("es")}
+            style={{ ...btnStyle, marginLeft: 8 }}
+          >
+            ES
           </button>
         </div>
       </div>
