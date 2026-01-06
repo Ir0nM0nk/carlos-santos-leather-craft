@@ -20,38 +20,6 @@ const TranslateWidget: React.FC = () => {
           <option value="de">Deutsch</option>
           <option value="es">Español</option>
         </select>
-        <div style={{ marginTop: 8, fontSize: 12 }}>
-          <button
-            onClick={() => setLang("pt")}
-            style={btnStyle}
-          >
-            PT
-          </button>
-          <button
-            onClick={() => setLang("en")}
-            style={{ ...btnStyle, marginLeft: 8 }}
-          >
-            EN
-          </button>
-          <button
-            onClick={() => setLang("fr")}
-            style={{ ...btnStyle, marginLeft: 8 }}
-          >
-            FR
-          </button>
-          <button
-            onClick={() => setLang("de")}
-            style={{ ...btnStyle, marginLeft: 8 }}
-          >
-            DE
-          </button>
-          <button
-            onClick={() => setLang("es")}
-            style={{ ...btnStyle, marginLeft: 8 }}
-          >
-            ES
-          </button>
-        </div>
       </div>
     </div>
   );
@@ -65,7 +33,8 @@ const containerStyle: React.CSSProperties = {
 };
 
 const widgetStyle: React.CSSProperties = {
-  background: "white",
+  background: "#000",
+  color: "#b87333",
   borderRadius: 8,
   boxShadow: "0 6px 18px rgba(0,0,0,0.12)",
   padding: 12,
@@ -77,17 +46,9 @@ const selectStyle: React.CSSProperties = {
   width: "100%",
   padding: "6px 8px",
   borderRadius: 6,
-  border: "1px solid #e5e7eb",
-};
-
-const btnStyle: React.CSSProperties = {
-  display: "inline-block",
-  padding: "6px 10px",
-  borderRadius: 6,
-  border: "none",
-  background: "#111827",
-  color: "white",
-  cursor: "pointer",
+  border: "1px solid #b87333",
+  background: "transparent",
+  color: "#b87333",
 };
 
 export default TranslateWidget;
