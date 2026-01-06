@@ -22,9 +22,10 @@ const Footer = () => {
               Qualidade, precisão e excelência em cada peça.
             </p>
             <p className="text-xs text-muted-foreground">
-              Zona Industrial de Felgueiras
+           
+Rua da Gandara, Nº 1061 
               <br />
-              4610-000 Felgueiras, Portugal
+        3720-701 São Roque, Oliveira de Azeméis
             </p>
           </div>
 
@@ -54,14 +55,14 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="tel:+351255000000" className="hover:text-primary transition-colors">
-                  +351 255 000 000
+                <a href="tel:+351256872989" className="hover:text-primary transition-colors">
+            256 872 989
                 </a>
               </li>
               <li>
-                <a href="mailto:info@santoscarlos.pt" className="hover:text-primary transition-colors">
-                  info@santoscarlos.pt
-                </a>
+                <a href="mailto:santosecarlos@sapo.pt" className="hover:text-primary transition-colors">
+                santosecarlos@sapo.pt
+                  </a>
               </li>
               <li>
                 Segunda a Sexta: 08:00 - 18:00

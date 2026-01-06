@@ -38,17 +38,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Morada",
-      content: "Zona Industrial de Felgueiras\n4610-000 Felgueiras, Portugal",
+      content: "Rua da Gandara, Nº 1061 3720-701 São Roque",
     },
     {
       icon: Phone,
       title: "Telefone",
-      content: "+351 255 000 000",
+      content: "+351 256 872 989",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@santoscarlos.pt",
+      content: "santosecarlos@sapo.pt",
     },
     {
       icon: Clock,

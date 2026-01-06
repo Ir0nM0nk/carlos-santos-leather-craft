@@ -30,9 +30,8 @@ const Header = () => {
     >
       <div className="container-narrow">
         <nav className="flex items-center justify-between h-20">
-          <a href="#" className="font-display text-2xl font-semibold tracking-wide text-foreground">
-            Santos <span className="text-primary">&</span> Carlos
-          </a>
+           {/* Logo */}
+          <img src="/src/assets/header-logo.png" alt="Santos & Carlos" className="h-24 w-auto" />
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-10">
