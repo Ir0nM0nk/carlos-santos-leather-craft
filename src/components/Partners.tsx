@@ -3,12 +3,13 @@ import { useTranslation } from "@/i18n";
 const Partners = () => {
   const { t } = useTranslation();
   const partners = [
-    { name: "BIRKENSTOCK", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Birkenstock-Logo.svg/320px-Birkenstock-Logo.svg.png" },
-    { name: "LOUIS VUITTON", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/320px-Louis_Vuitton_logo_and_wordmark.svg.png" },
-    { name: "GUCCI", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gucci_logo.svg/320px-Gucci_logo.svg.png" },
-    { name: "PRADA", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Prada-Logo.svg/320px-Prada-Logo.svg.png" },
-    { name: "HERMÈS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Herm%C3%A8s_Paris.svg/320px-Herm%C3%A8s_Paris.svg.png" },
-    { name: "CHANEL", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Chanel_logo_interlocking_cs.svg/320px-Chanel_logo_interlocking_cs.svg.png" },
+    { name: "Birkenstock", logo: "src/assets/birkenstock.png" },
+    { name: "Louis Vuitton", logo: "src/assets/LV.png" },
+    { name: "Coindu ", logo: "src/assets/coindu.png" },
+    { name: "S&CC Portugal", logo: "src/assets/scc.png" },
+    { name: "Ecco", logo: "src/assets/ecco.png" },
+    { name: "Ellen Truijen", logo: "src/assets/ellen.png" },
+    { name: "Belcinto", logo: "src/assets/belcinto.png" },
   ];
 
   // Duplicate partners for seamless loop
@@ -32,12 +33,12 @@ const Partners = () => {
           {duplicatedPartners.map((partner, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center h-24 w-48 mx-8 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex-shrink-0 flex items-center justify-center h-48 w-64 mx-2 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-h-16 max-w-full object-contain"
+                className="max-h-32 max-w-full object-contain"
               />
             </div>
           ))}
