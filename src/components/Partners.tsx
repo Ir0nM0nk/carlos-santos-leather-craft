@@ -1,15 +1,22 @@
 import { useTranslation } from "@/i18n";
+import birkenstock from "@/assets/birkenstock.png";
+import lv from "@/assets/LV.png";
+import coindu from "@/assets/coindu.png";
+import scc from "@/assets/scc.png";
+import ecco from "@/assets/ecco.png";
+import ellen from "@/assets/ellen.png";
+import belcinto from "@/assets/belcinto.png";
 
 const Partners = () => {
   const { t } = useTranslation();
   const partners = [
-    { name: "Birkenstock", logo: "src/assets/birkenstock.png" },
-    { name: "Louis Vuitton", logo: "src/assets/LV.png" },
-    { name: "Coindu ", logo: "src/assets/coindu.png" },
-    { name: "S&CC Portugal", logo: "src/assets/scc.png" },
-    { name: "Ecco", logo: "src/assets/ecco.png" },
-    { name: "Ellen Truijen", logo: "src/assets/ellen.png" },
-    { name: "Belcinto", logo: "src/assets/belcinto.png" },
+    { name: "Birkenstock", logo: birkenstock },
+    { name: "Louis Vuitton", logo: lv },
+    { name: "Coindu", logo: coindu },
+    { name: "S&CC Portugal", logo: scc },
+    { name: "Ecco", logo: ecco },
+    { name: "Ellen Truijen", logo: ellen },
+    { name: "Belcinto", logo: belcinto },
   ];
 
   // Duplicate partners for seamless loop

@@ -70,7 +70,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.quickLinks": "Links Rápidos",
     "footer.contactos": "Contactos",
     "footer.brand.desc": "Especialistas em cortantes para a indústria do calçado há mais de 30 anos. Qualidade, precisão e excelência em cada peça.",
-    "footer.madeIn": "Feito com dedicação em Portugal",
+    "footer.madeIn": "Designed and Developed by Sacra Agency",
     "footer.copyright": "© {year} Santos & Carlos. Todos os direitos reservados.",
   },
   en: {
@@ -134,7 +134,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.quickLinks": "Quick Links",
     "footer.contactos": "Contacts",
     "footer.brand.desc": "Specialists in dies for the footwear industry for over 30 years. Quality, precision and excellence in every piece.",
-    "footer.madeIn": "Made with care in Portugal",
+    "footer.madeIn": "Designed and Developed by Sacra Agency",
     "footer.copyright": "© {year} Santos & Carlos. All rights reserved.",
   },
   fr: {
@@ -187,7 +187,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.quickLinks": "Liens rapides",
     "footer.contactos": "Contacts",
     "footer.brand.desc": "Spécialistes des matrices pour l'industrie de la chaussure depuis plus de 30 ans. Qualité, précision et excellence dans chaque pièce.",
-    "footer.madeIn": "Fait avec soin au Portugal",
+    "footer.madeIn": "Designed and Developed by Sacra Agency",
     "footer.copyright": "© {year} Santos & Carlos. Tous droits réservés.",
 
     // Partners & Gallery
@@ -251,7 +251,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.quickLinks": "Schnellzugriff",
     "footer.contactos": "Kontakte",
     "footer.brand.desc": "Spezialisten für Stanzformen für die Schuhindustrie seit über 30 Jahren. Qualität, Präzision und Exzellenz in jedem Stück.",
-    "footer.madeIn": "Mit Sorgfalt in Portugal hergestellt",
+    "footer.madeIn": "Designed and Developed by Sacra Agency",
     "footer.copyright": "© {year} Santos & Carlos. Alle Rechte vorbehalten.",
 
     // Partners & Gallery
@@ -315,7 +315,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "footer.quickLinks": "Enlaces rápidos",
     "footer.contactos": "Contactos",
     "footer.brand.desc": "Especialistas en troqueles para la industria del calzado durante más de 30 años. Calidad, precisión y excelencia en cada pieza.",
-    "footer.madeIn": "Hecho con dedicación en Portugal",
+    "footer.madeIn": "Designed and Developed by Sacra Agency",
     "footer.copyright": "© {year} Santos & Carlos. Todos los derechos reservados.",
 
     // Partners & Gallery

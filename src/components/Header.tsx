@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "@/i18n";
 import { Menu, X } from "lucide-react";
+import headerLogo from "@/assets/header-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,8 +34,8 @@ const Header = () => {
     >
       <div className="container-narrow">
         <nav className="flex items-center justify-between h-20">
-           {/* Logo */}
-          <img src="/src/assets/header-logo.png" alt="Santos & Carlos" className="h-24 w-auto" />
+          {/* Logo */}
+          <img src={headerLogo} alt="Santos & Carlos" className="h-24 w-auto" />
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-10">
